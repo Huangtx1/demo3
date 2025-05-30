@@ -64,6 +64,33 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
+    .img-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .img-grid .img-item {
+      flex: 1 1 calc(50% - 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-grid .img-item img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .caption {
+      font-size: 0.9em;
+      color: #ccc;
+      text-align: center;
+      margin-top: 8px;
+    }
+    @media screen and (max-width: 768px) {
+      .img-grid .img-item {
+        flex: 1 1 100%;
+      }
+    }
     h2, h3 {
       font-weight: bold;
       color: #66fcf1;
@@ -115,13 +142,29 @@
     </p>
 
     <h2>Scientific Context</h2>
-    <img src="image/observation1.jpg" alt="Observation Setup" class="full">
-    <img src="image/observation2.jpg" alt="Deep Sky Equipment" class="full">
-    <img src="image/observation3.jpg" alt="Scope Closeup" class="full">
+    <div class="img-grid">
+      <div class="img-item">
+        <img src="image/observation1.jpg" alt="Observation Setup">
+        <div class="caption">Observation system during initial stellar identification.</div>
+      </div>
+      <div class="img-item">
+        <img src="image/observation2.jpg" alt="Deep Sky Equipment">
+        <div class="caption">High-magnification equipment used for deep space imaging.</div>
+      </div>
+    </div>
+    <div class="caption">Collaborative amateur-pro level setup under dark-sky conditions.</div>
 
-    <p>
-      The star ac458811 is a stable mid-size celestial body with moderate luminosity. It was discovered through collaborative observation using Celestron equipment and advanced imaging software under a youth astronomy initiative. Its calm radiation environment made it ideal for precision tracking and symbolic dedication.
-    </p>
+    <div class="img-grid">
+      <div class="img-item">
+        <img src="image/observation3.jpg" alt="Scope Closeup">
+        <div class="caption">Main telescope with cooled camera system.</div>
+      </div>
+      <div class="img-item">
+        <img src="image/star_image1.jpg" alt="Star Region">
+        <div class="caption">Target region captured under long exposure integration.</div>
+      </div>
+    </div>
+    <div class="caption">Visual confirmation of ac458811 during calm sky window.</div>
 
     <h3>Institutional Recognition</h3>
     <img src="image/nasa_buliding.jpg" alt="NASA Headquarters" class="full">
@@ -131,7 +174,6 @@
     </p>
 
     <h3>Space Perspective</h3>
-    <img src="image/star_image1.jpg" alt="Star Region" class="full">
     <img src="image/star_image2.jpg" alt="Star Detail" class="full">
 
     <p>
